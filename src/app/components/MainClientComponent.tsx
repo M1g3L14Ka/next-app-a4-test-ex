@@ -57,7 +57,7 @@ export default function MainClientComponent({ tariffs, isExpired }: MainProps) {
                         height={600} 
                         src='/man.png' 
                         alt="Атлет" 
-                        className="object-contain max-h-[1300px] drop-shadow-2xl"
+                        className="object-contain max-h-320 drop-shadow-2xl"
                         priority
                     />
                 </div>
@@ -69,7 +69,7 @@ export default function MainClientComponent({ tariffs, isExpired }: MainProps) {
                     {bestTariff && (
                         <div 
                             onClick={() => setSelectedCard(bestTariff.period)}
-                            className={`relative p-8 rounded-[32px] border-4 cursor-pointer transition-all duration-300 hover:scale-[1.01] bg-[#2D2D30]
+                            className={`relative p-8 rounded-4xl border-4 cursor-pointer transition-all duration-300 hover:scale-[1.01] bg-[#2D2D30]
                             ${selectedCard === bestTariff.period 
                                 ? 'border-[#FF9B02] shadow-[0_0_25px_rgba(255,155,2,0.2)]' 
                                 : 'border-gray-600 opacity-90'}`}
@@ -108,7 +108,7 @@ export default function MainClientComponent({ tariffs, isExpired }: MainProps) {
                                 </div>
                                     
                                 {/* Правая часть ХИТ карточки, описание */}
-                                <div className="w-1/2 max-w-[280px]">
+                                <div className="w-1/2 max-w-70">
                                     <p className="text-sm md:text-base text-gray-300 leading-relaxed font-medium">
                                         {bestTariff.text}
                                     </p>
