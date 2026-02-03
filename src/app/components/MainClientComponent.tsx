@@ -86,7 +86,7 @@ export default function MainClientComponent({ tariffs, isExpired }: MainProps) {
                             </div>
                                 
                             {/* Левая часть ХИТ карточки */}
-                            <div className="flex flex-row justify-between items-center gap-4 mt-2">
+                            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 mt-2">
                                 
                                 {/* : Заголовок + Цена */}
                                 <div className="flex flex-col">
@@ -118,12 +118,12 @@ export default function MainClientComponent({ tariffs, isExpired }: MainProps) {
                     )}
 
                     {/* Сетка обычных карточек (сортировка по цене) */}
-                    <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 items-stretch">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
                         {otherTariffs.map((item, index) => (
                             <div    
                                 key={`${item.id}-${index}`} 
                                 onClick={() => setSelectedCard(item.period)}
-                                className={`relative p-5 pt-8 rounded-3xl border-2 cursor-pointer flex flex-col transition-all duration-300 hover:scale-[1.02] bg-[#2D2D30]
+                                className={`relative p-5 pt-8 rounded-3xl border-2 cursor-pointer flex flex-col w-full transition-all 
                                 ${selectedCard === item.period ? 'border-[#FF9B02]' : 'border-gray-700'}`}
                             >
                                 {
@@ -201,7 +201,7 @@ export default function MainClientComponent({ tariffs, isExpired }: MainProps) {
                             className={`w-full sm:w-2/3 py-4 rounded-full font-extrabold text-lg uppercase tracking-wide transition-all transform active:scale-95
                             ${isError 
                                 ? 'bg-[#FF4D4D] text-white animate-[shake_0.5s_ease-in-out]' 
-                                : 'bg-[#FF9B02] text-black hover:bg-[#ffb03b] shadow-[0_0_20px_rgba(255,155,2,0.3)] animate-pulse'
+                                : 'bg-[#FF9B02] text-black hover:bg-[#ffb03b] shadow-[0_0_20px_rgnba(255,155,2,0.3)] animate-pulse'
                             }`}
                         >
                             Купить
